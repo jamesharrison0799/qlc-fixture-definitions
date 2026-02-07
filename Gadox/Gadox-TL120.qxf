@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FixtureDefinition>
+<FixtureDefinition xmlns="http://www.qlcplus.org/FixtureDefinition">
+ <Creator>
+  <Name>Q Light Controller Plus</Name>
+  <Version>5.1.0</Version>
+  <Author>James</Author>
+ </Creator>
+ <Manufacturer>Gadox</Manufacturer>
+ <Model>TL120</Model>
+ <Type>LED Bar (Pixels)</Type>
+ <Channel Name="[1] Mode Selection">
+  <Group Byte="0">Effect</Group>
+  <Capability Min="0" Max="51">CCT</Capability>
+  <Capability Min="52" Max="103">HSI</Capability>
+  <Capability Min="104" Max="156">RGBW</Capability>
+  <Capability Min="157" Max="208">FX Mode</Capability>
+  <Capability Min="209" Max="255">Filter Mode</Capability>
+ </Channel>
+ <Channel Name="[3] CCT Selection">
+  <Group Byte="0">Intensity</Group>
+  <Capability Min="0" Max="255">2700k - 6500k</Capability>
+ </Channel>
+ <Channel Name="[2] DIM Adjustment" Preset="IntensityDimmer"/>
+ <Channel Name="[3] Red Light Adjustment">
+  <Group Byte="0">Intensity</Group>
+  <Colour>Red</Colour>
+  <Capability Min="0" Max="255">0-255</Capability>
+ </Channel>
+ <Channel Name="[4] Green Light Adjustment">
+  <Group Byte="0">Intensity</Group>
+  <Colour>Green</Colour>
+  <Capability Min="0" Max="255">0-255</Capability>
+ </Channel>
+ <Channel Name="[5] Blue Light Adjustment">
+  <Group Byte="0">Intensity</Group>
+  <Colour>Blue</Colour>
+  <Capability Min="0" Max="255">0-255</Capability>
+ </Channel>
+ <Channel Name="[6] White Light Adjustment">
+  <Group Byte="0">Intensity</Group>
+  <Colour>White</Colour>
+  <Capability Min="0" Max="255">0-255</Capability>
+ </Channel>
+ <Channel Name="[3] Light Effect Type">
+  <Group Byte="0">Effect</Group>
+  <Capability Min="0" Max="18">RGB Recycle</Capability>
+  <Capability Min="19" Max="36">Flash</Capability>
+  <Capability Min="37" Max="56">Party</Capability>
+  <Capability Min="57" Max="75">Lightning</Capability>
+  <Capability Min="76" Max="95">Broken Bulb</Capability>
+  <Capability Min="96" Max="113">TV</Capability>
+  <Capability Min="114" Max="133">Candle</Capability>
+  <Capability Min="134" Max="151">Fire</Capability>
+  <Capability Min="152" Max="170">Firework</Capability>
+  <Capability Min="171" Max="189">Police Car</Capability>
+  <Capability Min="190" Max="208">Firetruck</Capability>
+  <Capability Min="209" Max="228">Ambulance</Capability>
+  <Capability Min="229" Max="247">Music</Capability>
+  <Capability Min="248" Max="255">SOS</Capability>
+ </Channel>
+ <Channel Name="[4] Light Effect Gear">
+  <Group Byte="0">Speed</Group>
+  <Capability Min="0" Max="85">I</Capability>
+  <Capability Min="86" Max="171">II</Capability>
+  <Capability Min="172" Max="255">III</Capability>
+ </Channel>
+ <Channel Name="[3] Filter Selection">
+  <Group Byte="0">Pan</Group>
+  <Capability Min="0" Max="127">R Filter</Capability>
+  <Capability Min="128" Max="255">L Filter</Capability>
+ </Channel>
+ <Channel Name="[4] (L or R) Filter Switch">
+  <Group Byte="0">Intensity</Group>
+  <Capability Min="0" Max="255">Each 13 values refer to one filter</Capability>
+ </Channel>
+ <Channel Name="[3] Hue Adjustment">
+  <Group Byte="0">Intensity</Group>
+  <Capability Min="0" Max="255">0-360</Capability>
+ </Channel>
+ <Channel Name="[4] Saturation Adjustment">
+  <Group Byte="0">Intensity</Group>
+  <Capability Min="0" Max="255">0-100</Capability>
+ </Channel>
+ <Mode Name="CCT Mode">
+  <Channel Number="0">[1] Mode Selection</Channel>
+  <Channel Number="1">[2] DIM Adjustment</Channel>
+  <Channel Number="2">[3] CCT Selection</Channel>
+  <Head>
+   <Channel>2</Channel>
+  </Head>
+ </Mode>
+ <Mode Name="HSI Mode">
+  <Channel Number="0">[1] Mode Selection</Channel>
+  <Channel Number="1">[2] DIM Adjustment</Channel>
+  <Channel Number="2">[3] Hue Adjustment</Channel>
+  <Channel Number="3">[4] Saturation Adjustment</Channel>
+ </Mode>
+ <Mode Name="RGBW Mode">
+  <Channel Number="0">[1] Mode Selection</Channel>
+  <Channel Number="1">[2] DIM Adjustment</Channel>
+  <Channel Number="2">[3] Red Light Adjustment</Channel>
+  <Channel Number="3">[4] Green Light Adjustment</Channel>
+  <Channel Number="4">[5] Blue Light Adjustment</Channel>
+  <Channel Number="5">[6] White Light Adjustment</Channel>
+ </Mode>
+ <Mode Name="FX Mode">
+  <Channel Number="0">[1] Mode Selection</Channel>
+  <Channel Number="1">[2] DIM Adjustment</Channel>
+  <Channel Number="2">[3] Light Effect Type</Channel>
+  <Channel Number="3">[4] Light Effect Gear</Channel>
+ </Mode>
+ <Mode Name="Filter Mode">
+  <Channel Number="0">[1] Mode Selection</Channel>
+  <Channel Number="1">[2] DIM Adjustment</Channel>
+  <Channel Number="2">[3] Filter Selection</Channel>
+  <Channel Number="3">[4] (L or R) Filter Switch</Channel>
+ </Mode>
+ <Physical>
+  <Bulb Type="LED" Lumens="0" ColourTemperature="0"/>
+  <Dimensions Weight="0" Width="0" Height="0" Depth="0"/>
+  <Lens Name="Other" DegreesMin="0" DegreesMax="0"/>
+  <Focus Type="Fixed" PanMax="0" TiltMax="0"/>
+  <Technical PowerConsumption="1300" DmxConnector="5-pin"/>
+ </Physical>
+</FixtureDefinition>
